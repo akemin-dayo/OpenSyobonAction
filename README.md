@@ -89,3 +89,9 @@ Release Changelog
 
 **Open Syobon Action v0.8:**
 * First release
+
+**Compile with CMake**
+```shell
+$ cmake .
+$ make
+```

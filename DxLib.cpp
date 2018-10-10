@@ -1,4 +1,5 @@
 #include "DxLib.h"
+#include <locale.h>
 
 SDL_Joystick* joystick;
 
