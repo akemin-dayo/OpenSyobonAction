@@ -139,20 +139,20 @@ void UpdateKeys()
 	    {
 		if(event.jaxis.axis == JOYSTICK_XAXIS)
 		{
-		    if(event.jaxis.value < 0) keysHeld[SDLK_LEFT] = true;
-		    else if(event.jaxis.value > 0) keysHeld[SDLK_RIGHT] = true;
+		    if(event.jaxis.value < 0) keysHeld[KEY_INPUT_LEFT] = true;
+		    else if(event.jaxis.value > 0) keysHeld[KEY_INPUT_RIGHT] = true;
 		    else {
-			keysHeld[SDLK_LEFT] = false;
-			keysHeld[SDLK_RIGHT] = false;
+			keysHeld[KEY_INPUT_LEFT] = false;
+			keysHeld[KEY_INPUT_RIGHT] = false;
 		    }
 		}
 		else if(event.jaxis.axis == JOYSTICK_YAXIS)
 		{
-		    if(event.jaxis.value < 0) keysHeld[SDLK_UP] = true;
-		    else if(event.jaxis.value > 0) keysHeld[SDLK_DOWN] = true;
+		    if(event.jaxis.value < 0) keysHeld[KEY_INPUT_UP] = true;
+		    else if(event.jaxis.value > 0) keysHeld[KEY_INPUT_DOWN] = true;
 		    else {
-			keysHeld[SDLK_UP] = false;
-			keysHeld[SDLK_DOWN] = false;
+			keysHeld[KEY_INPUT_UP] = false;
+			keysHeld[KEY_INPUT_DOWN] = false;
 		    }
 		}
 	    }

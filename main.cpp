@@ -4,7 +4,7 @@
 //Changed to ansi c++ main()
 int main(int argc, char *argv[])
 {
-    parseArgs(argc, argv);
+  parseArgs(argc, argv);
     if (DxLib_Init() == -1)
 	return 1;
 

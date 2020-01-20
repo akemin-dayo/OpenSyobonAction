@@ -52,11 +52,19 @@ void DrawString(int a, int b, const char *x, Uint32 c);
 void DrawFormatString(int a, int b, Uint32 color, const char *str, ...);
 
 //Key Aliases
+
+// #define KEY_INPUT_ESCAPE SDLK_ESCAPE
+// #define KEY_INPUT_A SDLK_LEFT
+// #define KEY_INPUT_B SDLK_RIGHT
+// #define KEY_INPUT_E SDLK_DOWN
+// #define KEY_INPUT_F SDLK_UP
+
 #define KEY_INPUT_ESCAPE SDLK_ESCAPE
-#define KEY_INPUT_LEFT SDLK_LEFT
-#define KEY_INPUT_RIGHT SDLK_RIGHT
-#define KEY_INPUT_DOWN SDLK_DOWN
-#define KEY_INPUT_UP SDLK_UP
+#define KEY_INPUT_LEFT SDLK_a
+#define KEY_INPUT_RIGHT SDLK_b
+#define KEY_INPUT_DOWN SDLK_e
+#define KEY_INPUT_UP SDLK_f
+
 #define KEY_INPUT_F1 SDLK_F1
 #define KEY_INPUT_O SDLK_o
 #define KEY_INPUT_Z SDLK_z
