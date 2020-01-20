@@ -5,28 +5,31 @@
 int main(int argc, char *argv[])
 {
   parseArgs(argc, argv);
-    if (DxLib_Init() == -1)
-	return 1;
 
-//全ロード
-    loadg();
+  if (DxLib_Init() == -1)
+		return 1;
 
-//フォント
-    SetFontSize(16);
-//SetFontThickness(4) ;
+	//全ロード
+  loadg();
 
-//ループ
-//for (maint=0;maint<=2;maint++){
-    while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
-	UpdateKeys();
-	maint = 0;
-	Mainprogram();
-	if (maint == 3)
-	    break;
-    }
+	//フォント
+	SetFontSize(16);
+	//SetFontThickness(4) ;
 
-//ＤＸライブラリ使用の終了処理
-    end();
+	//ループ
+	//for (maint=0;maint<=2;maint++){
+	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) 
+	{
+		UpdateKeys();
+		maint = 0;
+		Mainprogram();
+
+		if (maint == 3)
+			break;
+	}
+
+	//ＤＸライブラリ使用の終了処理
+  end();
 }
 
 //メイン描画

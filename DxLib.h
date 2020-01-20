@@ -1,3 +1,6 @@
+#ifndef DXLIB_H
+#define DXLIB_H
+
 //This file is a reverse engineered "DxLib.h" to the extent that
 //Syobon Action uses it. Minor functions are just replaced with SDL
 //counterparts.
@@ -60,6 +63,8 @@ void DrawFormatString(int a, int b, Uint32 color, const char *str, ...);
 // #define KEY_INPUT_F SDLK_UP
 
 #define KEY_INPUT_ESCAPE SDLK_ESCAPE
+
+// Arrow keys for HHKB keyboards
 #define KEY_INPUT_LEFT SDLK_a
 #define KEY_INPUT_RIGHT SDLK_b
 #define KEY_INPUT_DOWN SDLK_e
@@ -101,8 +106,10 @@ void DrawTurnGraphZ(int a, int b, SDL_Surface * mx);
 //#define DrawVertTurnGraph(x, y, e, a, mx, z) DrawRotaGraphZ(x, y, a, mx)
 void DrawVertTurnGraph(int a, int b, SDL_Surface * mx);
 
-SDL_Surface *DerivationGraph(int srcx, int srcy, int width, int height,
-			     SDL_Surface * src);
+SDL_Surface* DerivationGraph(int srcx, int srcy, int width, int height, SDL_Surface* src);
 
 //Noticably different than the original
-SDL_Surface *LoadGraph(const char *filename);
+SDL_Surface* LoadGraph(const char *filename);
+
+
+#endif // DXLIB_H

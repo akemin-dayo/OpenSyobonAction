@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 #include "DxLib.h"
 using namespace std;
 
@@ -246,3 +248,6 @@ string xs[31];
 //: Do with this what we did with fma
 long stimeZ;
 #define stime stimeZ
+
+
+#endif // MAIN_H

@@ -1,3 +1,5 @@
+#ifndef JOYCONFIG_H
+#define JOYCONFIG_H
 //Alter this file as necessary to change joystick controls. Yeah, I know, this is
 //inconvenient.
 
@@ -8,3 +10,4 @@
 //The button number that will be used for jumping
 #define JOYSTICK_JUMP 1
 
+#endif // JOYCONFIG_H

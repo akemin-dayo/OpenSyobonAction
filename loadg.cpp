@@ -12,15 +12,16 @@ extern int ne[40], nf[40];
 
 void loadg(void)
 {
-
-    for (t = 0; t < 51; t++) {
-	mgrap[t] = 0;
-    }
-    for (int i = 0; i < 161; i++)
+  for (t = 0; t < 51; t++) 
+  {
+    mgrap[t] = 0;
+  }
+  
+  for (int i = 0; i < 161; i++)
 	for (int j = 0; j < 8; j++)
 	    grap[i][j] = NULL;
 
-/*
+ /*
 for (t=0;t<161;t++){
 for (tt=0;tt<8;tt++){
 grap[t][tt]=0;
@@ -37,48 +38,50 @@ grap[t][tt]=0;
 //SetTransColor( 9*16+9 , 255 , 255 ) ;
 
 //プレイヤー
-    mgrap[0] = LoadGraph("res/player.PNG");
+  mgrap[0] = LoadGraph("res/player.PNG");
 //ブロック
-    mgrap[1] = LoadGraph("res/brock.PNG");
+  mgrap[1] = LoadGraph("res/brock.PNG");
 //アイテム
-    mgrap[2] = LoadGraph("res/item.PNG");
+  mgrap[2] = LoadGraph("res/item.PNG");
 //敵
-    mgrap[3] = LoadGraph("res/teki.PNG");
+  mgrap[3] = LoadGraph("res/teki.PNG");
 //背景
-    mgrap[4] = LoadGraph("res/haikei.PNG");
+  mgrap[4] = LoadGraph("res/haikei.PNG");
 //ブロック2
-    mgrap[5] = LoadGraph("res/brock2.PNG");
+  mgrap[5] = LoadGraph("res/brock2.PNG");
 //おまけ
-    mgrap[6] = LoadGraph("res/omake.PNG");
+  mgrap[6] = LoadGraph("res/omake.PNG");
 //おまけ2
-    mgrap[7] = LoadGraph("res/omake2.PNG");
+  mgrap[7] = LoadGraph("res/omake2.PNG");
 //タイトル
-    mgrap[30] = LoadGraph("res/syobon3.PNG");
+  mgrap[30] = LoadGraph("res/syobon3.PNG");
 
 
 //プレイヤー読み込み
-    grap[40][0] = DerivationGraph(0, 0, 30, 36, mgrap[0]);
-    grap[0][0] = DerivationGraph(31 * 4, 0, 30, 36, mgrap[0]);
-    grap[1][0] = DerivationGraph(31 * 1, 0, 30, 36, mgrap[0]);
-    grap[2][0] = DerivationGraph(31 * 2, 0, 30, 36, mgrap[0]);
-    grap[3][0] = DerivationGraph(31 * 3, 0, 30, 36, mgrap[0]);
-    grap[41][0] = DerivationGraph(50, 0, 51, 73, mgrap[6]);
+  grap[40][0] = DerivationGraph(0, 0, 30, 36, mgrap[0]);
+  grap[0][0] = DerivationGraph(31 * 4, 0, 30, 36, mgrap[0]);
+  grap[1][0] = DerivationGraph(31 * 1, 0, 30, 36, mgrap[0]);
+  grap[2][0] = DerivationGraph(31 * 2, 0, 30, 36, mgrap[0]);
+  grap[3][0] = DerivationGraph(31 * 3, 0, 30, 36, mgrap[0]);
+  grap[41][0] = DerivationGraph(50, 0, 51, 73, mgrap[6]);
 
-    x1 = 1;
+  x1 = 1;
 //ブロック読み込み
-    for (t = 0; t <= 6; t++) {
+  for (t = 0; t <= 6; t++) 
+  {
 	grap[t][x1] = DerivationGraph(33 * t, 0, 30, 30, mgrap[x1]);
 	grap[t + 30][x1] = DerivationGraph(33 * t, 33, 30, 30, mgrap[x1]);
 	grap[t + 60][x1] = DerivationGraph(33 * t, 66, 30, 30, mgrap[x1]);
 	grap[t + 90][x1] = DerivationGraph(33 * t, 99, 30, 30, mgrap[x1]);
-    }
-    grap[8][x1] = DerivationGraph(33 * 7, 0, 30, 30, mgrap[x1]);
-    grap[16][x1] = DerivationGraph(33 * 6, 0, 24, 27, mgrap[2]);
-    grap[10][x1] = DerivationGraph(33 * 9, 0, 30, 30, mgrap[x1]);
-    grap[40][x1] = DerivationGraph(33 * 9, 33, 30, 30, mgrap[x1]);
-    grap[70][x1] = DerivationGraph(33 * 9, 66, 30, 30, mgrap[x1]);
-    grap[100][x1] = DerivationGraph(33 * 9, 99, 30, 30, mgrap[x1]);
-//ブロック読み込み2
+  }
+
+  grap[8][x1] = DerivationGraph(33 * 7, 0, 30, 30, mgrap[x1]);
+  grap[16][x1] = DerivationGraph(33 * 6, 0, 24, 27, mgrap[2]);
+  grap[10][x1] = DerivationGraph(33 * 9, 0, 30, 30, mgrap[x1]);
+  grap[40][x1] = DerivationGraph(33 * 9, 33, 30, 30, mgrap[x1]);
+  grap[70][x1] = DerivationGraph(33 * 9, 66, 30, 30, mgrap[x1]);
+  grap[100][x1] = DerivationGraph(33 * 9, 99, 30, 30, mgrap[x1]);
+    //ブロック読み込み2
     x1 = 5;
     for (t = 0; t <= 6; t++) {
 	grap[t][x1] = DerivationGraph(33 * t, 0, 30, 30, mgrap[x1]);
@@ -257,9 +260,11 @@ anx[3]=30;any[3]=44;
 extern bool sound;
 void parseArgs(int argc, char* argv[])
 {
-    if(argc <= 1) return;
-    for(int i = 0; i < argc; i++)
-    {
-        if(!strcasecmp(argv[i], "-nosound")) sound = false;
-    }
+  if(argc <= 1)  
+    return;
+  for(int i = 0; i < argc; i++)
+  {
+    if(!strcasecmp(argv[i], "-nosound")) 
+      sound = false;
+  }
 }
