@@ -24,7 +24,7 @@ Controls (Keyboard)
 * Left/Right: Move
 * Z or Up: Jump
 * Space: Double-speed
-* 0 (while in-game): Self-destruction
+* O (while in-game): Self-destruction
 * Escape: Exit
 * F1: Return to title screen
 * 1-9 (while at the title screen): Select level
