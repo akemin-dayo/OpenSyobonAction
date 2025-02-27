@@ -86,7 +86,7 @@ void ChangeFontType(byte type)
 
 void DrawString(int a, int b, const char *x, Uint32 c)
 {
-    SDL_Color color = { c >> 16, c >> 8, c };
+  SDL_Color color = { static_cast<Uint8>(c >> 16), static_cast<Uint8>(c >> 8), static_cast<Uint8>(c) };
     SDL_Surface *rendered = TTF_RenderUTF8_Solid(font[fontsize], x, color);
     if (fontType == DX_FONTTYPE_EDGE) {
 	SDL_Color blk = { 0, 0, 0 };
@@ -113,7 +113,7 @@ void DrawFormatString(int a, int b, Uint32 color, const char *str, ...)
     vsprintf(newstr, str, args);
     va_end(args);
     DrawString(a, b, newstr, color);
-    delete newstr;
+    delete[] newstr;
 }
 
 //void DrawFormatString(int a, int b, int c

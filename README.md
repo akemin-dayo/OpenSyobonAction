@@ -32,7 +32,7 @@ Controls (Keyboard)
 
 Bugs
 ----
-Please report any bugs at the GitHub issue tracker: https://github.com/angelXwind/OpenSyobonAction/issues
+Please report any bugs at the GitHub issue tracker: https://github.com/akemin-dayo/OpenSyobonAction/issues
 
 Command Line Arguments
 ----------------------
@@ -40,11 +40,18 @@ Command Line Arguments
 
 Dependencies
 ------------
+* [bmake](https://www.crufty.net/help/sjg/bmake.html)
 * SDL
 * SDL_image
 * SDL_mixer
 * SDL_ttf
 * SDL_gfx
+
+
+Building
+--------
+It will suffice to run `bmake PLATFORM=<os>` where `<os>` is one of 'freebsd', 'linux', 'netbsd' or 'openbsd'.
+Default is 'linux'.
 
 Gamepad Notes
 -------------
