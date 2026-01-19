@@ -1067,9 +1067,7 @@ void rpaint()
 	str("制作・プレイに関わった方々",
 	    240 - 13 * 20 / 2, xx[12] / 100);
 	str("ステージ１　プレイ", 240 - 9 * 20 / 2, xx[13] / 100);
-	//Theres an encoding error here, this is only temporary
-	//str("æy@]`y",240-6*20/2,xx[14]/100);
-	str("TODO: Fix this encoding error...",240-6*20/2,xx[14]/100);
+	str("先輩　Ｘ～Ｚ",240-6*20/2,xx[14]/100);
 	str("ステージ２　プレイ", 240 - 9 * 20 / 2, xx[15] / 100);
 	str("友人　willowlet ", 240 - 8 * 20 / 2, xx[16] / 100);
 	str("ステージ３　プレイ", 240 - 9 * 20 / 2, xx[17] / 100);
